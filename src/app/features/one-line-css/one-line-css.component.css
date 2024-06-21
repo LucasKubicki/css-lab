@@ -1,0 +1,8 @@
+:host {
+  textarea {
+    min-height: 100px;
+    min-width: 200px;
+    resize: none;
+    field-sizing: content;
+  }
+}
