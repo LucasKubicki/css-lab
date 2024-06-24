@@ -1,0 +1,14 @@
+// TODO make a full box appear like tooltip ? pixel art // Letter by letter apparition [ with sound ] / shake / size /
+wave / red
+
+<div class="dialog-box">
+    {{ textToDisplay }}
+
+    <div class="text-animated">
+        @for (letter of textToDisplay; track $index) {
+            <span [style.--delay-animation]="50 * $index + 'ms'" [class.space]="letter === ' '">
+                {{ letter }}
+            </span>
+        }
+    </div>
+</div>

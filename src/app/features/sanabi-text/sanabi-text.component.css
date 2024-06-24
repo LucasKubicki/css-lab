@@ -1,0 +1,46 @@
+.dialog-box {
+  --delay-animation: 0.5s;
+  background-color: white;
+  border: 1px solid black;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  position: relative;
+  height: auto;
+  padding: 8px;
+  width: auto;
+  max-width: 600px;
+
+  .text-animated {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    white-space: pre-line;
+    content: " ";
+    top: 8px;
+    left: 8px;
+    position: absolute;
+    height: calc(100% - 16px);
+    width: calc(100% - 16px);
+
+    .space {
+      margin-right: 4px;
+    }
+
+    span {
+      opacity: 0;
+      animation: appear 0s linear;
+      animation-delay: var(--delay-animation);
+      animation-fill-mode: forwards; // stay on last frame
+    }
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
