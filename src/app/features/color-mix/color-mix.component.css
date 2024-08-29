@@ -1,0 +1,21 @@
+
+
+button {
+  --primary: #125df7;
+  transition: all .3s;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+
+  color: color-mix(in lch, var(--primary) var(--mix, 15%), blue );
+  background: color-mix(in lch, var(--primary) var(--mix, 15%), transparent);
+
+  &:hover {
+    --mix: 45%;
+  }
+
+  &:active {
+    --mix: 65%;
+  }
+}

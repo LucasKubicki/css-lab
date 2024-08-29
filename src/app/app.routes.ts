@@ -13,5 +13,9 @@ export const routes: Routes = [
     {
         path: 'sanabi-text',
         loadComponent: () => import('./features/sanabi-text/sanabi-text.component').then((m) => m.SanabiTextComponent)
+    },
+    {
+        path: 'color-mix',
+        loadComponent: () => import('./features/color-mix/color-mix.component').then((m) => m.ColorMixComponent)
     }
 ];

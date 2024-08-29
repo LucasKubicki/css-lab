@@ -1,6 +1,6 @@
 :host {
   textarea {
-    min-height: 100px;
+    min-height: 3lh;
     min-width: 200px;
     resize: none;
     field-sizing: content;

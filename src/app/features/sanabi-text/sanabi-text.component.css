@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .dialog-box {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
   --delay-animation: 0.5s;
   background-color: white;
   border: 1px solid black;
@@ -6,7 +11,8 @@
   height: auto;
   padding: 8px;
   width: auto;
-  max-width: 400px;
+  max-width: auto;
+  word-break: manual;
 
   .text-animated {
     color: black;
@@ -21,7 +27,7 @@
 
     span {
       opacity: 0;
-      animation: appear 0s linear;
+      animation: appear 50ms linear;
       animation-delay: var(--delay-animation);
       animation-fill-mode: forwards; // stay on last frame
     }
@@ -31,8 +37,10 @@
 @keyframes appear {
   0% {
     opacity: 0;
+    transform: translateY(10px);
   }
   100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
