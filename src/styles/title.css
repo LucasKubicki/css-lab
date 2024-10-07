@@ -1,0 +1,77 @@
+/* base-styles.css */
+/* ... (previous styles remain the same) ... */
+
+/* Refined Big Title Style with Subtle Neon Effect */
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    text-shadow:
+            0 0 1px var(--primary-color),
+            0 0 2px var(--primary-color),
+            0 0 3px var(--primary-color);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    animation: subtle-neon 4s ease-in-out infinite alternate;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    text-shadow:
+            0 0 1px var(--primary-color),
+            0 0 2px var(--primary-color),
+            0 0 3px var(--primary-color);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+@keyframes subtle-neon {
+    from {
+        text-shadow:
+                0 0 1px var(--primary-color),
+                0 0 2px var(--primary-color),
+                0 0 3px var(--primary-color);
+    }
+    to {
+        text-shadow:
+                0 0 2px var(--primary-color),
+                0 0 4px var(--primary-color),
+                0 0 6px var(--primary-color);
+    }
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    color: transparent;
+    text-shadow:
+            0 0 1px rgba(76, 175, 80, 0.3),
+            0 0 2px rgba(76, 175, 80, 0.3);
+    animation: subtle-echo 2s ease-in-out infinite 0.1s;
+}
+
+@keyframes subtle-echo {
+    from {
+        opacity: 0.2;
+        filter: blur(0.2px);
+    }
+    to {
+        opacity: 0.4;
+        filter: blur(0.5px);
+    }
+}
+
+/* ... (rest of the styles remain the same) ... */

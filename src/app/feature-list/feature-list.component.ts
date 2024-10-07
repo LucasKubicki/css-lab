@@ -11,5 +11,5 @@ import { RouterLink } from '@angular/router';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeatureListComponent {
-    readonly features = routes;
+    readonly features = routes.filter((route) => route.path !== '');
 }

@@ -1,7 +1,9 @@
-TODO CSS
+<h1>CSS Features</h1>
 
-@for (feature of features; track $index) {
-    <div [routerLink]="feature.path" class="feature">
-        {{ feature.path }}
-    </div>
-}
+<div class="list">
+    @for (feature of features; track $index) {
+        <div [routerLink]="feature.path" class="card">
+            {{ feature.path }}
+        </div>
+    }
+</div>
