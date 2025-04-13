@@ -17,5 +17,13 @@ export const routes: Routes = [
     {
         path: 'color-mix',
         loadComponent: () => import('./features/color-mix/color-mix.component').then((m) => m.ColorMixComponent)
+    },
+    {
+        path: 'grid',
+        loadComponent: () => import('./features/grid/grid.component').then((cmp) => cmp.GridComponent)
+    },
+    {
+        path: 'carousel',
+        loadComponent: () => import('./features/carousel/carousel.component').then((cmp) => cmp.CarouselComponent)
     }
 ];

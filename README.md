@@ -24,4 +24,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 //todo
 use :where to fix specificity issues
 
+NOTE:
+use outline-color: transparent to help accessibility
         up(

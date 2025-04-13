@@ -1,0 +1,13 @@
+<div #carousel class="carousel">
+    <div class="carousel-item">
+        <img [src]="'/images/1.jpg'" alt="Carousel Image" />
+    </div>
+    <div class="carousel-item">
+        <img [src]="'/images/2.jpg'" alt="Carousel Image" />
+    </div>
+</div>
+@for (item of items; track item) {
+    <div class="button">
+        {{ item }}
+    </div>
+}
